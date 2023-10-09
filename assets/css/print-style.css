@@ -1,0 +1,50 @@
+/* Specify styles for the entire page when printing */
+@media print {
+    body {
+      font-size: 14px; /* Adjust font size for readability */
+      line-height: 1.5; /* Adjust line height for readability */
+      margin: 0; /* Remove any default margins */
+      padding: 0; /* Remove any default padding */
+      background: #fff; /* Set a white background */
+    }
+  
+    /* Specify styles for headings */
+    h1, h2, h3 {
+      font-size: 18px; /* Adjust heading font size */
+    }
+  
+    /* Specify styles for links */
+    a {
+      text-decoration: none; /* Remove underlines from links */
+    }
+  
+    /* Specify styles for navigation menus (if applicable) */
+    .nav-menu {
+      display: none; /* Hide navigation menus for printing */
+    }
+  
+    /* Specify styles for footer (if applicable) */
+    #footer {
+      display: none; /* Hide the footer for printing */
+    }
+  
+    /* Add page breaks if needed */
+    /* Example: */
+    .page-break {
+      page-break-before: always;
+    }
+  }
+
+  /* Hide elements with the .no-print class when printing */
+@media print {
+    .no-print {
+      display: none !important;
+    }
+  }
+  
+  /* Show elements with the .print-only class when printing */
+  @media print {
+    .print-only {
+      display: block !important;
+    }
+  }
