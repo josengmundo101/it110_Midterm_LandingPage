@@ -367,7 +367,7 @@ body.dark-mode #dark-mode-toggle:hover {
     font-size: 64px;
     font-weight: 700;
     line-height: 56px;
-    color: var(--color-body-light)
+    color: var(--color-brand)
   }
 
   #hero p {
@@ -551,7 +551,7 @@ body.dark-mode #dark-mode-toggle:hover {
   .resume .resume-item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
-    border-left: 2px solid var(--color-base);
+    border-left: 2px solid var(--color-brand);
     position: relative;
   }
 
@@ -561,13 +561,13 @@ body.dark-mode #dark-mode-toggle:hover {
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: var(--color-base2);
+    color: var(--color-brand2);
     margin-bottom: 10px;
   }
 
   .resume .resume-item h5 {
     font-size: 16px;
-    background: var(--color-body);
+    background: var(--color-base);
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
@@ -1018,5 +1018,69 @@ body.dark-mode #dark-mode-toggle:hover {
     font-size: 13px;
   }
 
+/* Add a floating container to each section */
 
+/* Adjust the padding for smaller screens */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 0;
+  }
+}
+
+/* Add a background color to the floating container content */
+section .floating-content {
+  background: var(--color-base);
+  padding: 20px; /* Adjust the padding as needed */
+  border-radius: 10px; /* Adjust the border-radius for rounded corners */
+}
+
+/* Adjust the text color for the content within the floating container */
+section .floating-content p,
+section .floating-content h2,
+section .floating-content h3 {
+  color: var(--color-heading);
+}
+
+/* Center the content within the floating container */
+section .floating-content {
+  position: relative;
+  text-align: center;
+}
+
+/* Ensure that the content does not overflow outside the container */
+section .floating-content {
+  overflow: hidden;
+}
+
+/* Adjust the z-index to place the content above the background */
+section .floating-content {
+  z-index: 2;
+}
   
+/* Styles for the container content in light mode */
+section .floating-content {
+  background: var(--color-base2);
+  padding: 20px; /* Adjust the padding as needed */
+  border-radius: 10px; /* Adjust the border-radius for rounded corners */
+  color: var(--color-heading); /* Text color for light mode */
+}
+
+/* Styles for specific elements within the container in light mode */
+section .floating-content p,
+section .floating-content h2,
+section .floating-content h3 {
+  color: var(--color-heading); /* Text color for light mode */
+}
+
+/* Styles for the container content in dark mode */
+body.dark-mode section .floating-content {
+  background: var(--color-base); /* Background color for dark mode */
+  color: var(--color-heading); /* Text color for dark mode */
+}
+
+/* Styles for specific elements within the container in dark mode */
+body.dark-mode section .floating-content p,
+body.dark-mode section .floating-content h2,
+body.dark-mode section .floating-content h3 {
+  color: var(--color-heading); /* Text color for dark mode */
+}
